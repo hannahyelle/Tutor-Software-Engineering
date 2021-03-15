@@ -9,15 +9,21 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 Editing and running tutor-app requires
+
 NodeJS: https://nodejs.org/en/download/
+
 React: https://reactjs.org/
+
 and a code editor of your choice. The documents in the main folder can be opened using Microsoft Word and Excel, or any program that can import .docx and .xlsx files
 
 ## Running Tests
 
 The website can be tested by opening your system's command line, and entering
+
 'cd (directory of tutor-app folder)'
+
 'npm start'
+
 This will start the react sever and open the website in your default web browser
 
 ## Versioning
