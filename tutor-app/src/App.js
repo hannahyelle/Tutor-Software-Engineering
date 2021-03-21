@@ -4,7 +4,9 @@ import UserStore from './Components/stores/UserStore';
 import submitButton from './Components/submitButton';
 import loginForm from './Components/loginForm';
 import './App.css';
-//this youtube series is helping to set up login system -> might have other videos!
+
+//this youtube series is helping to set up login system -> 
+//might have other videos https://www.youtube.com/watch?v=QoLUB0QkUaE&t=165s!
 
 class App extends React.Component {
   //March 12th - Hannah 
