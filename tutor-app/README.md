@@ -1,6 +1,11 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Libraries
+###'mbox package'
+Navigate to the repository, and run 'npm install mobx --save'
+Then run 'npm install mobx-react --save'
+
 
 ## Available Scripts
 
