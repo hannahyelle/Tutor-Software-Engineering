@@ -1,7 +1,7 @@
 //March 12th - Hannah 
 import React from 'react';
 
-class submitButton extends React.Component {
+class SubmitButton extends React.Component {
   render(){
     return (
         <div className="submitButton">
@@ -17,4 +17,4 @@ class submitButton extends React.Component {
 }
 }
 
-export default submitButton;
+export default SubmitButton;

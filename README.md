@@ -21,7 +21,15 @@ mobx:
 Navigate to the repository, and run 'npm install mobx --save'
 Then run 'npm install mobx-react --save'
 
-## Running Tests
+####Back End Dependencies:
+Navigate to tutor-app/backend
+'npm install bcrypt --save'
+'npm install express --save'
+'npm install express-mysql-session --save'
+'npm install express-session --save'
+'npm install mysql --save'
+
+## Running Tests 
 
 The website can be tested by opening your system's command line, and entering
 
