@@ -1,12 +1,12 @@
 //March 12th - Hannah 
 import React from 'react';
-import submitButton from './submitButton';
+import SubmitButton from './submitButton';
 import UserStore from './stores/UserStore';
-import inputField from './inputField';
+import InputField from './inputField';
 
 
 
-class loginForm extends React.Component {
+class LoginForm extends React.Component {
   
     constructor(props){
         super(props);
@@ -79,19 +79,19 @@ render(){
     
   return (
     <div className="login Form">
-        <inputField
+        <InputField
             type = 'text'
             placeholder = 'Username'
             value = {this.state.username ? this.state.username : ''}
             onChange= { (val) => this.setInputValue('username',val)}
             />
-        <inputField
+        <InputField
             type = 'text'
             placeholder = 'Password'
-            value = {this.state.username ? this.state.username : ''}
+            value = {this.state.password ? this.state.password : ''}
             onChange ={(val) =>this.setInputValue('password',val)}
             />
-        <submitButton
+        <SubmitButton
             text = 'Login'
             disabled = {this.state.buttonDisabled}
             onClick = { () => this.doLogin()}
@@ -101,4 +101,4 @@ render(){
 }
 }
 
-export default loginForm;
+export default LoginForm;

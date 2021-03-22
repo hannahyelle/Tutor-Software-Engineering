@@ -1,7 +1,7 @@
 //March 12th - Hannah 
 import React from 'react';
 //can be used for multople things (user name or password)
-class inputField extends React.Component {
+class InputField extends React.Component {
   render(){
   return (
     <div className="inputField">
@@ -18,4 +18,4 @@ class inputField extends React.Component {
 }
 }
 
-export default inputField;
+export default InputField;
