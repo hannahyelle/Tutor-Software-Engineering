@@ -1,8 +1,8 @@
 import React from 'react';
 import {observer} from 'mobx-react';
 import UserStore from './Components/stores/UserStore';
-import SubmitButton from './Components/submitButton';
-import LoginForm from './Components/loginForm';
+import submitButton from './Components/submitButton';
+import loginForm from './Components/loginForm';
 import './App.css';
 
 //this youtube series is helping to set up login system -> 
@@ -78,21 +78,30 @@ class App extends React.Component {
 
     else{
       if (UserStore.isLoggedIn){
-        <div className='app'>
-          <div className = "container">
-            Welcome {UserStore.username}
-            <SubmitButton
-              text={'Log out'}
-              disabled = {false}
-              onClick = {() => this.doLogout()}
-              />
+        return (
+          <div className='app'>
+            <div className = "container">
+              Welcome {UserStore.username}
+              <submitButton
+                text={'Log out'}
+                disabled = {false}
+                onClick = {() => this.doLogout()}
+                />
+            </div>
           </div>
-        </div>
+        );
       }
       return (
         <div clasName = 'app'>
           <div className = 'container'>
-            <LoginForm />
+            logout submit button should appear
+            <submitButton
+              text={'Log out'}
+              disabled = {false}
+              onClick = {() => this.doLogout()}
+            />
+            login form should appear
+            <loginForm />
           </div>
         </div>
 
