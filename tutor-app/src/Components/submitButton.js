@@ -1,6 +1,7 @@
 //March 12th - Hannah 
 import React from 'react';
 
+//submit button for rendering 
 class SubmitButton extends React.Component {
   render(){
     return (

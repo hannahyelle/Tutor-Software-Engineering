@@ -8,6 +8,7 @@ import InputField from './inputField';
 
 class LoginForm extends React.Component {
   
+    //stores information
     constructor(props){
         super(props);
         this.state = {
@@ -16,6 +17,7 @@ class LoginForm extends React.Component {
             buttonDisabled: false
         }
     }
+
 
     setInputValue(property, val){
         val = val.trim();
@@ -27,6 +29,7 @@ class LoginForm extends React.Component {
             [property]:val
         })
     }
+
     //resets form if something is incorrect
     resetForm(){
         this.setState({
@@ -36,6 +39,7 @@ class LoginForm extends React.Component {
         })
     }
 
+    //logs in a user
     async doLogin(){
         if (!this.state.username){
             return;
@@ -43,9 +47,11 @@ class LoginForm extends React.Component {
         if(!this.state.password){
             return;
         }
+        //can not press login a second time
         this.setState({
             buttonDisabled:true
         })
+        //try to set username and password
         try{
             let res = await fetch('/login',{
                 method: 'post',
@@ -59,8 +65,7 @@ class LoginForm extends React.Component {
                     password: this.state.password
                 })
             });
-            let result = await res.json();
-            //set values to 
+            let result = await res.json(); 
             if (result && result.success){
                 UserStore.isLogginIn = true;
                 UserStore.username = result.username;
@@ -70,13 +75,14 @@ class LoginForm extends React.Component {
                 alert(result.msg);
             }
         }
+        //if there is an issue reset the form
         catch(e){
             console.log(e);
             this.resetForm();
         }
     }
 render(){
-    
+
   return (
     <div className="login Form">
         <InputField
