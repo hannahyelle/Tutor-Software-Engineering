@@ -4,7 +4,6 @@ import SubmitButton from './submitButton';
 import UserStore from './stores/UserStore';
 import InputField from './inputField';
 
-
 //Hananh
 
 class LoginForm extends React.Component {

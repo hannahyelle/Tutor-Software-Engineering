@@ -31,6 +31,9 @@ The website can be tested by opening your system's command line, and entering
 
 This will start the react sever and open the website in your default web browser
 
+
+Alternatively, Windows users can quickly start the website by running the "start.bat" file in the tutor-app folder
+
 ## Versioning
 
 We use NVM (https://github.com/nvm-sh/nvm) for versioning. For the versions available, see https://github.com/hannahyelle/Tutor-Software-Engineering/tags
