@@ -7,21 +7,21 @@ class toolBar extends React.Component{
         if (UserStore.isLoggedIn == True){
             return(
                 <ul class = "navs">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="homeScreen.js">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Create Profile</a></li>
-                    <li><a href="app.js">Log In</a></li>
+                    <li><a href="LoginForm.js">Log In</a></li>
                 </ul>  );
         }
         else{
             return(
                 <ul class = "navs">
-                    <li><a href="home.html">Home</a></li>
+                    <li><a href="homeScreen.js">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">Create Profile</a></li>
-                    <li><a href="app.js">Log Out</a></li>
+                    <li><a href="LoginForm.js">Log Out</a></li>
                 </ul> );
         }
     }

@@ -1,146 +1,90 @@
-//March 12th - Hannah 
-import React from 'react';
-import SubmitButton from './submitButton';
-import UserStore from './stores/UserStore';
-import InputField from './inputField';
+import React from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
-//Hananh
 
-class LoginForm extends React.Component {
+class LoginForm extends React.Component{
     
-    loginCredentials = []
-    //stores information
-    constructor(props){
-        super(props);
-        this.state = {
-            username: '',
-            password: '',
-            buttonDisabled: false
-        }
-    }
+    loginCredentials = [['hannah@me.com','hello']];
+    state = {
+        email:"",
+        password:"",
+        login:false
+    };
+    
+    handleChange = e => {
+        this.setState({[e.target.name]:e.target.value});
+    };
 
+    /*validateForm(){
+        // password needs to be 14 or less in length
+        return email.length >0 && password.length > 0 && password.length < 15;
+    } */
 
-    setInputValue(property, val){
-        val = val.trim();
-        //username and password have max length of 12
-        if (val.length >12){
-            return;
-        }
-        this.setState({
-            [property]:val
-        })
-    }
-
-    //resets form if something is incorrect
-    resetForm(){
-        this.setState({
-        username: '',
-        password: '',
-        buttonDisabled: false
-        })
-    }
-
-    checkLogin(username, pswrd){
-        for (var k = 0; k < this.loginCredentials.length; k++){
-            if (k[0] == username && k[1] == pswrd){
-                return true
-            }
-            else{
-                return false
-            }
-        }
-    }
-
-    async signUp(){
-        if (!this.state.username){
+    logIn(){
+        if(!this.state.username){
             return;
         }
         if(!this.state.password){
             return;
         }
         try{
-
+            var i;
+            for (i=0;i<this.loginCredentials.length;i++){
+                if (this.loginCredentials[i] == [this.state.email,this.state.password]){
+                    this.state.login=true;
+                }
+            }
+            return;
         }
         catch(e){
-            console.log(e);
-            this.resetForm();
-            this.loginCredentials.push([this.state.username,this.state.password]);
-            this.doLogin();
+            console.log(e)
         }
     }
-    //logs in a user
-    async doLogin(){
-        if (!this.state.username){
+
+    register(){
+        if(!this.state.username){
             return;
         }
         if(!this.state.password){
             return;
         }
-        //can not press login a second time
-        this.setState({
-            buttonDisabled:true
-        })
-        //try to set username and password
         try{
-            let res = await fetch('/login',{
-                method: 'post',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-
-                },
-                body: JSON.stringify({
-                    username: this.state.username,
-                    password: this.state.password
-                })
-            });
-            let result = this.checkLogin(this.state.username,this.state.password)
-            if (result == true){
-                UserStore.isLogginIn = true;
-                UserStore.username = result.username;
-            }
-            else if (result == false){
-                this.resetForm();
-                alert(result.msg);
+            var i;
+            var accountStatus = false;
+            for (i=0;i<this.loginCredentials.length;i++){
+                if (this.loginCredentials[i] == [this.state.email,this.state.password]){
+                    accountStatus= true;
+                }
+            if (accountStatus == false){
+                this.loginCredentials.push([this.state.email,this.state.password])
             }
         }
-        //if there is an issue reset the form
+        }
         catch(e){
-            console.log(e);
-            this.resetForm();
+            console.log(e)
         }
     }
+
     render(){
-        //return login if user presses login
         return (
-            <div className="login Form">
-                <InputField
-                    type = 'text'
-                    placeholder = 'Username'
-                    value = {this.state.username ? this.state.username : ''}
-                    onChange= { (val) => this.setInputValue('username',val)}
-                    />
-                <InputField
-                    type = 'text'
-                    placeholder = 'Password'
-                    value = {this.state.password ? this.state.password : ''}
-                    onChange ={(val) =>this.setInputValue('password',val)}
-                    />
-                <SubmitButton
-                    text = 'Login'
-                    disabled = {this.state.buttonDisabled}
-                    onClick = {this.doLogin()}
-                />
-                <SubmitButton
-                    text = 'Sign Up'
-                    disabled = {this.state.buttonDisabled}
-                    onClick = {this.signUp()}
-                />
-            </div>
-        );
+        <Form>
+            <Form.Group controlId = "formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type ="email" placeholder = "name@example.com" onChange={this.handleChange}/>
+            </Form.Group>
+            <Form.Group controlId ="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" onChange={this.handleChange}/>
+            </Form.Group>
+            <Button variant="primary" type="submit" onClick = {this.logIn}>
+                Submit
+            </Button>
+            <Button variant="secondary" type="submit" onClick = {this.register}>
+                Register
+            </Button>
+        </Form>)
     }
-
 }
 
-
-export default LoginForm;
+export default LoginForm

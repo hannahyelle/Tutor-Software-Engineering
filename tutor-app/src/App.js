@@ -1,6 +1,6 @@
 import React from 'react';
 import {observer} from 'mobx-react';
-import LoginPortal from './Components/LoginPortal';
+import LoginForm from './Components/LoginForm';
 import HomeScreen from './Components/homeScreen';
 import './App.css';
 
@@ -15,11 +15,11 @@ class App extends React.Component{
         </div>
       )
     }
-    else if(window.location.href.includes("/login")){
+    else if(window.location.href.includes("/LoginForm")){
       return(
         <div clasName = 'app'>
             <div className = 'container'>
-              <LoginPortal/>
+              <LoginForm/>
             </div>
         </div>
       )
