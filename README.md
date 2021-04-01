@@ -21,6 +21,9 @@ mobx:
 Navigate to the repository, and run 'npm install mobx --save'
 Then run 'npm install mobx-react --save'
 
+React boot-strap:
+navigate to the repository, and run 'npm install react-bootstrap bootstrap'
+
 ## Running Tests 
 
 The website can be tested by opening your system's command line, and entering
