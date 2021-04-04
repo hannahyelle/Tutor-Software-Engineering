@@ -39,7 +39,7 @@ class homeScreen extends React.Component{
                     <div className="scroll-box">
                         <p>Tutors can apply by filling out our application process and forms. Once a Tutor is accepted one is then required to make an account. Tutor accounts have different features thant student accounts such as a lace to store materials for tutoring. In order to become a tutor one must be a umaine student.</p>
                     </div>
-                    <a href="https://www.youtube.com/watch?v=Uo2SNtFofWI"><h5>Tutor Sign-up</h5></a>
+                    <a href="./TutorApply.js"><h5>Tutor Application</h5></a>
                     </div>
                 </div>
                 <h4 className="footer">Tutor Group 2021</h4>

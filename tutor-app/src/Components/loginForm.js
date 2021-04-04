@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import "../App.css";
 
 
 class LoginForm extends React.Component{
@@ -68,22 +69,31 @@ class LoginForm extends React.Component{
 
     render(){
         return (
-        <Form>
-            <Form.Group controlId = "formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type ="email" placeholder = "name@example.com" onChange={this.handleChange}/>
-            </Form.Group>
-            <Form.Group controlId ="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" onChange={this.handleChange}/>
-            </Form.Group>
-            <Button variant="primary" type="submit" onClick = {this.logIn}>
-                Submit
-            </Button>
-            <Button variant="secondary" type="submit" onClick = {this.register}>
-                Register
-            </Button>
-        </Form>)
+        <div>
+            <link rel="stylesheet" href="style.css" />
+            <div className="form">
+            <h2 className="logIn-header">Log In to Tutor Zone 3000!</h2>
+                <Form className="innerform">
+                    <Form.Group className = "input" controlId = "formBasicEmail">
+                        <Form.Label>Email address
+                        </Form.Label>
+                        <Form.Control type ="email" placeholder = "name@example.com" onChange={this.handleChange}/>
+                    </Form.Group>
+
+                    <Form.Group className = "input" controlId ="formBasicPassword">
+                        <Form.Label>Password 
+                        </Form.Label>
+                        <Form.Control type="password" placeholder="Password" onChange={this.handleChange}/>
+                    </Form.Group>
+                    <Button variant="primary" type="submit" className = "button" onClick = {this.logIn}>
+                        Submit
+                    </Button>
+                    <Button variant="secondary" type="submit" className = "button" onClick = {this.register}>
+                        New Register
+                    </Button>
+                </Form>
+            </div>
+        </div>)
     }
 }
 

@@ -186,6 +186,14 @@ nav{
     padding-left: 30px;
 }
 
+/*form box*/
+.form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:100vh;
+}
+
 /*Important formatting stuff(?)*/
 @media screen and (max-width:1024px){
     .navs{
