@@ -28,6 +28,7 @@ class homeScreen extends React.Component{
                         <p>Students are able to create an account. With an account comes a profile and access to a calendar. A student can then browse the tutor search tool which lets the one search for classes or other users. Students are able to browse the tutors available and look at comapre schedules for comaptable times. Students must be a umaine student in order to create an account.</p>
                     </div>
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h5>Student Sign-up</h5></a>
+                    <a href="post-listing"><h5>Create A Listing!</h5></a>
                     </div>
                 </div>
                 <div className="double-box">
@@ -39,7 +40,7 @@ class homeScreen extends React.Component{
                     <div className="scroll-box">
                         <p>Tutors can apply by filling out our application process and forms. Once a Tutor is accepted one is then required to make an account. Tutor accounts have different features thant student accounts such as a lace to store materials for tutoring. In order to become a tutor one must be a umaine student.</p>
                     </div>
-                    <a href="./TutorApply.js"><h5>Tutor Application</h5></a>
+                    <a href="tutor-application"><h5>Tutor Application</h5></a>
                     </div>
                 </div>
                 <h4 className="footer">Tutor Group 2021</h4>
