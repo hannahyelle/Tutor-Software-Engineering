@@ -3,6 +3,7 @@ import {observer} from 'mobx-react';
 import LoginForm from './Components/LoginForm';
 import HomeScreen from './Components/homeScreen';
 import TutorApply from './Components/TutorApply';
+import studentProfile from './Components/studentProfile.js'
 import './App.css';
 
 class App extends React.Component{
@@ -30,6 +31,16 @@ class App extends React.Component{
         <div className = 'app'>
             <div className = 'container'>
               <TutorApply/>
+            </div>
+        </div>
+      )
+    }
+
+    else if(window.location.href.includes("/studentProfile")){
+      return(
+        <div className = 'app'>
+            <div className = 'container'>
+              <studentProfile/>
             </div>
         </div>
       )
