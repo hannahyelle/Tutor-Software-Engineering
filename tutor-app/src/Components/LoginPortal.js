@@ -1,24 +1,18 @@
 import React from 'react';
 import {observer} from 'mobx-react';
-<<<<<<< HEAD
-import LoginForm from './Components/LoginForm';
-import HomeScreen from './Components/homeScreen';
-import TutorApply from './Components/TutorApply';
-import studentProfile from './Components/studentProfile.js'
-=======
-import UserStore from './Components/stores/UserStore';
-import SubmitButton from './Components/submitButton';
-import LoginForm from './Components/loginForm';
->>>>>>> 101a75294fcc150636318e610662ed31a2626795
-import './App.css';
+import UserStore from './stores/UserStore';
+import SubmitButton from './submitButton';
+import LoginForm from './loginForm';
+import './loginPortal.css';
+//Hannah
 
 //this youtube series is helping to set up login system -> 
-//might have other videos https://www.youtube.com/watch?v=QoLUB0QkUaE&t=165s!
+//
 
-class App extends React.Component {
-  //March 12th - Hannah 
-  //define methods of api 
-  //login function 
+//login form and functions for login form
+
+class LoginPortal extends React.Component {
+  
   async componentDidMount(){
     try{
       //checks if user is logged in once component is mounted
@@ -83,16 +77,6 @@ class App extends React.Component {
       )
     }
 
-    else if(window.location.href.includes("/studentProfile")){
-      return(
-        <div className = 'app'>
-            <div className = 'container'>
-              <studentProfile/>
-            </div>
-        </div>
-      )
-    }
-
     else{
       if (UserStore.isLoggedIn){
         <div className='app'>
@@ -106,17 +90,16 @@ class App extends React.Component {
           </div>
         </div>
       }
+
       return (
         <div clasName = 'app'>
           <div className = 'container'>
             <LoginForm />
           </div>
         </div>
-
       );
-
     }
 }
 }
 
-export default observer(App);
+export default observer(LoginPortal);
