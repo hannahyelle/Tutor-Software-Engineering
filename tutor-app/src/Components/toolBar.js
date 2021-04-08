@@ -20,11 +20,7 @@ class toolBar extends React.Component{
                     <li><a href="homeScreen.js">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact Us</a></li>
-<<<<<<< HEAD
                     <li><a href="studentProfile.js">Create Profile</a></li>
-=======
-                    <li><a href="LoginForm.js">Create Profile</a></li>
->>>>>>> 101a75294fcc150636318e610662ed31a2626795
                     <li><a href="LoginForm.js">Log Out</a></li>
                 </ul> );
         }

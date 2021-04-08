@@ -1,110 +1,100 @@
-//March 12th - Hannah 
-import React from 'react';
-import SubmitButton from './submitButton';
-import UserStore from './stores/UserStore';
-import InputField from './inputField';
+import React from "react";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import "../App.css";
 
 
+class LoginForm extends React.Component{
+    
+    loginCredentials = [['hannah@me.com','hello']];
+    state = {
+        email:"",
+        password:"",
+        login:false
+    };
+    
+    handleChange = e => {
+        this.setState({[e.target.name]:e.target.value});
+    };
 
-class LoginForm extends React.Component {
-  
-    //stores information
-    constructor(props){
-        super(props);
-        this.state = {
-            username: '',
-            password: '',
-            buttonDisabled: false
-        }
-    }
+    /*validateForm(){
+        // password needs to be 14 or less in length
+        return email.length >0 && password.length > 0 && password.length < 15;
+    } */
 
-
-    setInputValue(property, val){
-        val = val.trim();
-        //username and password have max length of 12
-        if (val.length >12){
-            return;
-        }
-        this.setState({
-            [property]:val
-        })
-    }
-
-    //resets form if something is incorrect
-    resetForm(){
-        this.setState({
-        username: '',
-        password: '',
-        buttonDisabled: false
-        })
-    }
-
-    //logs in a user
-    async doLogin(){
-        if (!this.state.username){
+    logIn(){
+        if(!this.state.username){
             return;
         }
         if(!this.state.password){
             return;
         }
-        //can not press login a second time
-        this.setState({
-            buttonDisabled:true
-        })
-        //try to set username and password
         try{
-            let res = await fetch('/login',{
-                method: 'post',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-
-                },
-                body: JSON.stringify({
-                    username: this.state.username,
-                    password: this.state.password
-                })
-            });
-            let result = await res.json(); 
-            if (result && result.success){
-                UserStore.isLogginIn = true;
-                UserStore.username = result.username;
+            var i;
+            for (i=0;i<this.loginCredentials.length;i++){
+                if (this.loginCredentials[i] == [this.state.email,this.state.password]){
+                    this.state.login=true;
+                }
             }
-            else if (result && result.success === false){
-                this.resetForm();
-                alert(result.msg);
-            }
+            return;
         }
-        //if there is an issue reset the form
         catch(e){
-            console.log(e);
-            this.resetForm();
+            console.log(e)
         }
     }
-render(){
 
-  return (
-    <div className="login Form">
-        <InputField
-            type = 'text'
-            placeholder = 'Username'
-            value = {this.state.username ? this.state.username : ''}
-            onChange= { (val) => this.setInputValue('username',val)}
-            />
-        <InputField
-            type = 'text'
-            placeholder = 'Password'
-            value = {this.state.password ? this.state.password : ''}
-            onChange ={(val) =>this.setInputValue('password',val)}
-            />
-        <SubmitButton
-            text = 'Login'
-            disabled = {this.state.buttonDisabled}
-            onClick = { () => this.doLogin()}
-        />
-    </div>
-  );
-}
+    register(){
+        if(!this.state.username){
+            return;
+        }
+        if(!this.state.password){
+            return;
+        }
+        try{
+            var i;
+            var accountStatus = false;
+            for (i=0;i<this.loginCredentials.length;i++){
+                if (this.loginCredentials[i] == [this.state.email,this.state.password]){
+                    accountStatus= true;
+                }
+            if (accountStatus == false){
+                this.loginCredentials.push([this.state.email,this.state.password])
+            }
+        }
+        }
+        catch(e){
+            console.log(e)
+        }
+    }
+
+    render(){
+        return (
+        <div>
+            <link rel="stylesheet" href="style.css" />
+            <div className="form">
+            <h2 className="logIn-header">Log In to Tutor Zone 3000!</h2>
+                <Form className="innerform">
+                    <Form.Group className = "input" controlId = "formBasicEmail">
+                        <Form.Label>Email address
+                        </Form.Label>
+                        <Form.Control type ="email" placeholder = "name@example.com" onChange={this.handleChange}/>
+                    </Form.Group>
+
+                    <Form.Group className = "input" controlId ="formBasicPassword">
+                        <Form.Label>Password 
+                        </Form.Label>
+                        <Form.Control type="password" placeholder="Password" onChange={this.handleChange}/>
+                    </Form.Group>
+                    <Button variant="primary" type="submit" className = "button" onClick = {this.logIn}>
+                        Submit
+                    </Button>
+                    <Button variant="secondary" type="submit" className = "button" onClick = {this.register}>
+                        New Register
+                    </Button>
+                </Form>
+            </div>
+        </div>)
+    }
 }
 
-export default LoginForm;
+export default LoginForm

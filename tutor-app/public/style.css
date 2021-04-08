@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/*Global palette variables*/
 :root{
     --main: #FFFFFF;
     --bg-1: #003263;
@@ -12,6 +13,7 @@
     --txt-2: #000000;
 }
 
+/*Toolbar*/
 nav{
     display: flex;
     justify-content: space-around;
@@ -46,6 +48,7 @@ nav{
     font-size: 14 px;
 }
 
+/*Homepage body*/
 .page{
     background-color: var(--main);
 }
@@ -72,10 +75,11 @@ nav{
 .description{
     color: var(--txt-2);
     font-family: "Gill Sans", sans-serif;
-    font-size: 1.4em;
+    font-size: 1.0em;
     padding: 20px;
 }
 
+/*Double box = the two-column rows on the home page*/
 .double-box{
     width: 80%;
     margin-left: auto;
@@ -94,7 +98,7 @@ nav{
     width: 50%;
 }
 
-.double-box h2{
+.double-box h3{
     text-align: center;
     font-family: 'Raleway', sans-serif;
     color: var(--txt-1);
@@ -109,13 +113,13 @@ nav{
 .double-box p{
     color: var(--txt-2);
     font-family: "Gill Sans", sans-serif;
-    font-size: 1.4em;
+    font-size: 1.0em;
     margin-left: 20px;
     margin-right: 20px;
     display: block;
 }
 
-.double-box h3{
+.double-box h5{
     border-radius: 10px;
     text-align: center;
     font-family: 'Raleway', sans-serif;
@@ -128,7 +132,7 @@ nav{
     margin-right: auto;
 }
 
-.double-box h3:hover{
+.double-box h5:hover{
     background-color: var(--bg-2);
 }
 
@@ -146,10 +150,11 @@ nav{
     display: table;
 }
 
+/*Scrollable text boxes and custom scrollbars*/
 .scroll-box{
     margin-left: 20px;
     margin-right: 20px;
-    max-height: 200px;
+    max-height: 300px;
     overflow-y: scroll;
 }
 
@@ -172,6 +177,7 @@ nav{
     background: var(--bg-2);  
 }
 
+/*footer*/
 .footer{
     background-color: var(--bg-1);
     font-family: 'Raleway', sans-serif;
@@ -180,6 +186,15 @@ nav{
     padding-left: 30px;
 }
 
+/*form box*/
+.form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:100vh;
+}
+
+/*Important formatting stuff(?)*/
 @media screen and (max-width:1024px){
     .navs{
         width: 70%;
