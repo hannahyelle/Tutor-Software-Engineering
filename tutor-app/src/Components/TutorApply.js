@@ -8,9 +8,10 @@ class TutorApplication extends React.Component{
         firstname:"",
         lastname:"",
         email:"",
+        age:"",
         sub1:"",
         sub2:"",
-        prior1:"",
+        employment:"",
         gpa:"",
     };
 
@@ -42,6 +43,11 @@ class TutorApplication extends React.Component{
                     </Form.Group>
 
                     <Form.Group className = "input" controlId ="formSub1">
+                        <Form.Label>Age </Form.Label>
+                        <Form.Control type="age" onChange={this.handleChange}/>
+                    </Form.Group>
+
+                    <Form.Group className = "input" controlId ="formSub1">
                         <Form.Label>Class subject 1 </Form.Label>
                         <Form.Control type="sub1" placeholder="STS232" onChange={this.handleChange}/>
                     </Form.Group>
@@ -51,14 +57,9 @@ class TutorApplication extends React.Component{
                         <Form.Control type="sub2" placeholder="..." onChange={this.handleChange}/>
                     </Form.Group>
 
-                    <Form.Group className = "input" controlId ="formSub3">
-                        <Form.Label>Class subject 3 </Form.Label>
-                        <Form.Control type="sub3" placeholder="..." onChange={this.handleChange}/>
-                    </Form.Group>
-
                     <Form.Group className = "input" controlId ="formPrior1">
-                        <Form.Label>Prior experience </Form.Label>
-                        <Form.Control type="prior 1" placeholder="Ski Instructor" onChange={this.handleChange}/>
+                        <Form.Label>Employment </Form.Label>
+                        <Form.Control type="employment" placeholder="Ski Instructor" onChange={this.handleChange}/>
                     </Form.Group>
 
                     <Form.Group className = "input" controlId ="formGPA">
