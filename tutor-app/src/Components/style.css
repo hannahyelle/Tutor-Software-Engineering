@@ -1,147 +1,239 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-
 }
-body{
+
+/*Global palette variables*/
+:root{
+    --main: #FFFFFF;
+    --bg-1: #003263;
+    --bg-2: #77B5E6;
+    --txt-1: #FFFFFF;
+    --txt-2: #000000;
+}
+
+/*Toolbar*/
+nav{
     display: flex;
-    height: 100vh;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px;
-    background: linear-gradient(135deg, #33C1FF, #333FFF);
+    min-height: 8vh;
+    background-color: var(--bg-1);
+    font-family: 'Raleway', sans-serif;
 }
 
-.container{
-    max-width: 700px;
-    width: 100%;
-    background: #fff;
-    padding: 25px 30px;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+.logo{
+    color: var(--main);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 25 px;
 }
 
-.container .title{
-    font-size: 25px;
-    font-weight: 500;
-    position: relative;
-}
-.container.title::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 30px;
-    border-radius: 5px;
-    background: linear-gradient(135deg, #33C1FF, #333FFF)
-}
-.content form .user-details{
+.navs{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0 12px 0;
+    justify-content: space-around;
+    width: 50%;
 }
-form .user-details .input-box{
-    margin-bottom: 15px;
-    width: calc(100%/2-20px);
+
+.navs li{
+    list-style: none;
 }
-form .input-box span-details{
+
+.navs a{
+    color: var(--main);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14 px;
+}
+
+/*Homepage body*/
+.page{
+    background-color: var(--main);
+}
+
+.center {
+    margin: 20px;
     display: block;
-    font-weight: 500;
-    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;  
 }
-.user-details .input-box input{
-    height: 45px;
+
+.hp-header{
+    text-align: center;
+    color: var(--txt-1);
+    background-color: var(--bg-1);
+    font-family: 'Raleway', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;  
+    padding: 20px;
+}
+
+.description{
+    color: var(--txt-2);
+    font-family: "Gill Sans", sans-serif;
+    font-size: 1.0em;
+    padding: 20px;
+}
+
+/*Double box = the two-column rows on the home page*/
+.double-box{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-box{
+    display: block;
+    float: left;
+    width: 50%;
+}
+
+.right-box{
+    display: block;
+    float: right;
+    width: 50%;
+}
+
+.double-box h3{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: var(--txt-1);
+    background-color: var(--bg-2);
+    padding: 10px;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: block;
+}
+
+.double-box p{
+    color: var(--txt-2);
+    font-family: "Gill Sans", sans-serif;
+    font-size: 1.0em;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: block;
+}
+
+.double-box h5{
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: var(--txt-1);
+    background-color: var(--bg-1);
+    padding: 10px;
+    margin: 30px;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.double-box h5:hover{
+    background-color: var(--bg-2);
+}
+
+.double-box img{
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding-left: 15px;
-    font-size: 16px;
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
 }
-.user-details .input-box input:focus,
-.user-details .input-box input:valid{
-    border-color: #333FFF;
+
+.double-box::after {
+    content: "";
+    clear: both;
+    display: table;
 }
-form .gender-details .gender-title{
-    font-size: 20px;
-    font-weight: 500;
+
+/*Scrollable text boxes and custom scrollbars*/
+.scroll-box{
+    margin-left: 20px;
+    margin-right: 20px;
+    max-height: 300px;
+    overflow-y: scroll;
 }
-form .category{
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+    
+::-webkit-scrollbar-track {
+    border: 1px solid var(--main);
+    border-radius: 10px;
+}
+    
+::-webkit-scrollbar-thumb {
+    background: var(--bg-1);  
+    border-radius: 10px;
+}
+    
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-2);  
+}
+
+/*footer*/
+.footer{
+    background-color: var(--bg-1);
+    font-family: 'Raleway', sans-serif;
+    color: var(--txt-1);
+    padding: 10px;
+    padding-left: 30px;
+}
+
+/*form box*/
+.form{
     display: flex;
-    width:80%;
-    margin: 14px 0;
-    justify-content: space-between;
-}
-form .category label{
-    display: flex;
+    justify-content: space-around;
     align-items: center;
-    cursor: pointer;
+    height:100vh;
 }
-form .category .dot{
-    height: 18px;
-    width: 18px;
-    background: #d9d9d9;
-    border-radius: 50%;
-    margin-right: 10px;
-    border: 5px solid transparent;
-    transition: all 0.3s ease;
-}
-#dot-1:checked ~ .category label .one,
-#dot-2:checked ~ .category label .two,
-#dot-3:checked ~ .category label .three{
-    border-color: #d9d9d9;
-    background: #333FFF;
-}
-form input[type="radio"]{
-    display: none;
-}
-form .button{
-    height: 45px;
-    margin: 35px 0;
-}
-form .button input{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    color: #fff;
-    border: none;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, #33C1FF, #333FFF);
-}
-form .button input:hover{
-    background: linear-gradient(-135deg, #33C1FF, #333FFF);
-}
-@media(max-width: 584px){
-    .container{
-        max-width: 100%;
+
+/*Important formatting stuff(?)*/
+@media screen and (max-width:1024px){
+    .navs{
+        width: 70%;
     }
-    form .user-details .input-box{
-        margin-bottom: 15px;
-        width: 100%;
+}
+
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
     }
-    form .category{
-        width:100%;
+    .navs{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: var(--bg-1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
     }
-    .content form .user-details{
-        max-height: 300px;
-        overflow-y: scroll;
+    .navs li{
+        opacity: 0;
     }
-    user-details::-webkit-scrollbar{
-        width: 0;
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
     }
-    @media(max-width: 459px){
-        .container .content .category{
-            flex-direction: column;
-        }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
     }
 }

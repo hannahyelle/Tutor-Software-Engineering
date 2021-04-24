@@ -5,6 +5,41 @@
     --txt-1: #FFFFFF;
     --txt-2: #000000;
 }
+/*Toolbar*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--bg-1);
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo{
+    color: var(--main);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 25 px;
+}
+
+.navs{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.navs li{
+    list-style: none;
+}
+
+.navs a{
+    color: var(--main);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14 px;
+}
+
 
 /*form box*/
 .form{
@@ -24,7 +59,7 @@
     background-color: var(--main);
     border-color:#000000;
     padding: 12px;
-    width: 40%;
+    width: 60%;
 }
 
 .button{
@@ -34,7 +69,7 @@
     font-weight: bold;
     font-family: 'Raleway', sans-serif;
     justify-content: center;
-    width: 100%;
+    width: 60%;
     height: 15%;
 }
 
@@ -42,9 +77,10 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 90%;
     padding: 12px;
     font-family: 'Raleway', sans-serif;
+    color:#000000;
    }
 
 .logIn-header{

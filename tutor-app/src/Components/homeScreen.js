@@ -1,5 +1,6 @@
 import React from 'react';
 import UserStore from './stores/UserStore';
+import './style.css';
 
 class homeScreen extends React.Component{
 

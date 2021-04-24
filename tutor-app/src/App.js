@@ -5,54 +5,145 @@ import HomeScreen from './Components/homeScreen';
 import TutorApply from './Components/TutorApply';
 import studentProfile from './Components/studentProfile.js'
 import './App.css';
+import './index.css'
 
 class App extends React.Component{
   render(){
     if(window.location.href.includes("/home")){
       return(
-        <div className = 'app'>
-            <div className = 'container'>
-              <HomeScreen/>
+        /*<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        </head>*/
+
+        <body>
+          <div className="nav"> 
+            <nav className="nav">
+                <div className="logo">
+                    <h4>Tutor App</h4>
+                </div>
+                <ul className= "navs">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="../src/Components/TutorApply.js">Tutor Apply</a></li>
+                    <li><a href="../src/Components/studentProfile.js">Create Profile</a></li>
+                    <li><a href="../src/Components/LoginForm.js">Log In</a></li>
+                </ul>
+            </nav>
+            <div id="root"></div>
+            <div className = 'app'>
+                <div className = 'container'>
+                  <HomeScreen/>
+                </div>
             </div>
-        </div>
+            </div>
+          </body>
+
       )
     }
     else if(window.location.href.includes("/LoginForm")){
       return(
-        <div className = 'app'>
-            <div className = 'container'>
-              <LoginForm/>
-            </div>
-        </div>
+        <body>
+            <nav>
+                <div class="logo">
+                    <h4>Tutor App</h4>
+                </div>
+                <ul class = "navs">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="../src/Components/TutorApply.js">Tutor Apply</a></li>
+                    <li><a href="../src/Components/studentProfile.js">Create Profile</a></li>
+                    <li><a href="../src/Components/LoginForm.js">Log In</a></li>
+                </ul>
+            </nav>
+            <div id="root"></div>
+          <div className = 'app'>
+              <div className = 'container'>
+                <LoginForm/>
+              </div>
+          </div>
+        </body>
       )
     }
     else if(window.location.href.includes("/TutorApply")){
       return(
+        <body>
+          <div className="nav"> 
+            <nav className="nav">
+                <div className="logo">
+                    <h4>Tutor App</h4>
+                </div>
+                <ul className= "navs">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="../src/Components/TutorApply.js">Tutor Apply</a></li>
+                    <li><a href="../src/Components/studentProfile.js">Create Profile</a></li>
+                    <li><a href="../src/Components/LoginForm.js">Log In</a></li>
+                </ul>
+            </nav>
         <div className = 'app'>
             <div className = 'container'>
               <TutorApply/>
             </div>
         </div>
+        </div>
+        </body>
       )
     }
 
     else if(window.location.href.includes("/studentProfile")){
       return(
+        <body>
+          <div className="nav"> 
+            <nav className="nav">
+                <div className="logo">
+                    <h4>Tutor App</h4>
+                </div>
+                <ul className= "navs">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="../src/Components/TutorApply.js">Tutor Apply</a></li>
+                    <li><a href="../src/Components/studentProfile.js">Create Profile</a></li>
+                    <li><a href="../src/Components/LoginForm.js">Log In</a></li>
+                </ul>
+            </nav>
         <div className = 'app'>
             <div className = 'container'>
               <studentProfile/>
             </div>
         </div>
+        </div>
+        </body>
       )
     }
 
     else{
       return(
-        <div clasName = 'app'>
-            <div className = 'container'>
-              <HomeScreen/>
+        <body>
+          <div className="nav"> 
+            <nav className="nav">
+                <div className="logo">
+                    <h4>Tutor App</h4>
+                </div>
+                <ul className= "navs">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="../src/Components/TutorApply.js">Tutor Apply</a></li>
+                    <li><a href="../src/Components/studentProfile.js">Create Profile</a></li>
+                    <li><a href="../src/Components/LoginForm.js">Log In</a></li>
+                </ul>
+            </nav>
+            <div className = 'app'>
+                <div className = 'container'>
+                  <HomeScreen/>
+                </div>
             </div>
-        </div>
+            </div>
+          </body>
       )
     }
   }
