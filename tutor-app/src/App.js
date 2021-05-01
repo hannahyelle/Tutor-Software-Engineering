@@ -122,6 +122,33 @@ class App extends React.Component{
       )
     }
 
+    else if(window.location.href.includes("/post-success")){
+      return(
+        <body>
+          <div className="nav"> 
+            <nav className="nav">
+                <div className="logo">
+                    <h4>Tutor App</h4>
+                </div>
+                <ul className= "navs">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="post-listing">Post Listing</a></li>
+                    <li><a href="tutor-apply">Tutor Apply</a></li>
+                    <li><a href="profile">Create Profile</a></li>
+                    <li><a href="login">Log In</a></li>
+                </ul>
+            </nav>
+        <div className = 'app'>
+            <div className = 'container'>
+              <h2>Successfully posted your listing!</h2>
+              <a href="home"><h5>Retrun to Home</h5></a>
+            </div>
+        </div>
+        </div>
+        </body>
+      )
+    }
+
     else if(window.location.href.includes("/post-listing")){
       return(
         <body>
