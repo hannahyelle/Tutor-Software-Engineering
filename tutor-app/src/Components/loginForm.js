@@ -74,22 +74,22 @@ class LoginForm extends React.Component{
             <div className="form">
             <h2 className="logIn-header">Log In to Tutor Zone 3000!</h2>
                 <Form className="innerform">
-                    <Form.Group className = "input" controlId = "formBasicEmail">
+                    <Form.Group className = "input" controlId = "formBasicEmail" >
                         <Form.Label>Email address
                         </Form.Label>
-                        <Form.Control type ="email" placeholder = "name@example.com" onChange={this.handleChange}/>
+                        <Form.Control type ="email" placeholder = "name@example.com" data-testid='new_email' onChange={this.handleChange}/>
                     </Form.Group>
 
-                    <Form.Group className = "input" controlId ="formBasicPassword">
+                    <Form.Group className = "input" controlId ="formBasicPassword" data-testid ='new_password'>
                         <Form.Label>Password 
                         </Form.Label>
                         <Form.Control type="password" placeholder="Password" onChange={this.handleChange}/>
                     </Form.Group>
-                    <Button variant="primary" type="submit" className = "button" onClick = {this.logIn}>
+                    <Button variant="primary" type="submit" className = "button" data-testid="submitButton" onClick = {this.logIn}>
                         Submit
                     </Button>
                     <Button variant="secondary" type="submit" className = "button" onClick = {this.register}>
-                        New Register
+                        Student Register
                     </Button>
                 </Form>
             </div>
