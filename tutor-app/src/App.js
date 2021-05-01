@@ -29,7 +29,7 @@ class App extends React.Component{
                 </div>
                 <ul className= "navs">
                     <li><a href="home">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="post-listing">Post Listing</a></li>
                     <li><a href="tutor-apply">Tutor Apply</a></li>
                     <li><a href="profile">Create Profile</a></li>
                     <li><a href="login">Log In</a></li>
@@ -55,7 +55,7 @@ class App extends React.Component{
                 </div>
                 <ul class = "navs">
                     <li><a href="home">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="post-listing">Post Listing</a></li>
                     <li><a href="tutor-apply">Tutor Apply</a></li>
                     <li><a href="profile">Create Profile</a></li>
                     <li><a href="login">Log In</a></li>
@@ -80,7 +80,7 @@ class App extends React.Component{
                 </div>
                 <ul className= "navs">
                     <li><a href="home">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="post-listing">Post Listing</a></li>
                     <li><a href="tutor-apply">Tutor Apply</a></li>
                     <li><a href="profile">Create Profile</a></li>
                     <li><a href="login">Log In</a></li>
@@ -106,7 +106,7 @@ class App extends React.Component{
                 </div>
                 <ul className= "navs">
                     <li><a href="home">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="post-listing">Post Listing</a></li>
                     <li><a href="tutor-apply">Tutor Apply</a></li>
                     <li><a href="profile">Create Profile</a></li>
                     <li><a href="login">Log In</a></li>
@@ -132,7 +132,7 @@ class App extends React.Component{
                 </div>
                 <ul className= "navs">
                     <li><a href="home">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="post-listing">Post Listing</a></li>
                     <li><a href="tutor-apply">Tutor Apply</a></li>
                     <li><a href="profile">Create Profile</a></li>
                     <li><a href="login">Log In</a></li>
@@ -158,7 +158,7 @@ class App extends React.Component{
                 </div>
                 <ul className= "navs">
                     <li><a href="home">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="post-listing">Post Listing</a></li>
                     <li><a href="tutor-apply">Tutor Apply</a></li>
                     <li><a href="profile">Create Profile</a></li>
                     <li><a href="login">Log In</a></li>
