@@ -3,7 +3,8 @@ import {observer} from 'mobx-react';
 import LoginForm from './Components/LoginForm';
 import HomeScreen from './Components/homeScreen';
 import TutorApply from './Components/TutorApply';
-import studentProfile from './Components/studentProfile.js'
+import PostListing from './Components/postListing';
+import StudentProfile from './Components/studentProfile';
 import './App.css';
 import './index.css'
 
@@ -29,9 +30,9 @@ class App extends React.Component{
                 <ul className= "navs">
                     <li><a href="home">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="../src/Components/TutorApply.js">Tutor Apply</a></li>
-                    <li><a href="../src/Components/studentProfile.js">Create Profile</a></li>
-                    <li><a href="../src/Components/LoginForm.js">Log In</a></li>
+                    <li><a href="tutor-apply">Tutor Apply</a></li>
+                    <li><a href="profile">Create Profile</a></li>
+                    <li><a href="login">Log In</a></li>
                 </ul>
             </nav>
             <div id="root"></div>
@@ -45,7 +46,7 @@ class App extends React.Component{
 
       )
     }
-    else if(window.location.href.includes("/LoginForm")){
+    else if(window.location.href.includes("/login")){
       return(
         <body>
             <nav>
@@ -55,9 +56,9 @@ class App extends React.Component{
                 <ul class = "navs">
                     <li><a href="home">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="../src/Components/TutorApply.js">Tutor Apply</a></li>
-                    <li><a href="../src/Components/studentProfile.js">Create Profile</a></li>
-                    <li><a href="../src/Components/LoginForm.js">Log In</a></li>
+                    <li><a href="tutor-apply">Tutor Apply</a></li>
+                    <li><a href="profile">Create Profile</a></li>
+                    <li><a href="login">Log In</a></li>
                 </ul>
             </nav>
             <div id="root"></div>
@@ -69,7 +70,7 @@ class App extends React.Component{
         </body>
       )
     }
-    else if(window.location.href.includes("/TutorApply")){
+    else if(window.location.href.includes("/tutor-apply")){
       return(
         <body>
           <div className="nav"> 
@@ -80,9 +81,9 @@ class App extends React.Component{
                 <ul className= "navs">
                     <li><a href="home">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="../src/Components/TutorApply.js">Tutor Apply</a></li>
-                    <li><a href="../src/Components/studentProfile.js">Create Profile</a></li>
-                    <li><a href="../src/Components/LoginForm.js">Log In</a></li>
+                    <li><a href="tutor-apply">Tutor Apply</a></li>
+                    <li><a href="profile">Create Profile</a></li>
+                    <li><a href="login">Log In</a></li>
                 </ul>
             </nav>
         <div className = 'app'>
@@ -95,7 +96,7 @@ class App extends React.Component{
       )
     }
 
-    else if(window.location.href.includes("/studentProfile")){
+    else if(window.location.href.includes("/profile")){
       return(
         <body>
           <div className="nav"> 
@@ -106,14 +107,40 @@ class App extends React.Component{
                 <ul className= "navs">
                     <li><a href="home">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="../src/Components/TutorApply.js">Tutor Apply</a></li>
-                    <li><a href="../src/Components/studentProfile.js">Create Profile</a></li>
-                    <li><a href="../src/Components/LoginForm.js">Log In</a></li>
+                    <li><a href="tutor-apply">Tutor Apply</a></li>
+                    <li><a href="profile">Create Profile</a></li>
+                    <li><a href="login">Log In</a></li>
                 </ul>
             </nav>
         <div className = 'app'>
             <div className = 'container'>
-              <studentProfile/>
+              <StudentProfile/>
+            </div>
+        </div>
+        </div>
+        </body>
+      )
+    }
+
+    else if(window.location.href.includes("/post-listing")){
+      return(
+        <body>
+          <div className="nav"> 
+            <nav className="nav">
+                <div className="logo">
+                    <h4>Tutor App</h4>
+                </div>
+                <ul className= "navs">
+                    <li><a href="home">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="tutor-apply">Tutor Apply</a></li>
+                    <li><a href="profile">Create Profile</a></li>
+                    <li><a href="login">Log In</a></li>
+                </ul>
+            </nav>
+        <div className = 'app'>
+            <div className = 'container'>
+              <PostListing/>
             </div>
         </div>
         </div>
@@ -132,9 +159,9 @@ class App extends React.Component{
                 <ul className= "navs">
                     <li><a href="home">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="../src/Components/TutorApply.js">Tutor Apply</a></li>
-                    <li><a href="../src/Components/studentProfile.js">Create Profile</a></li>
-                    <li><a href="../src/Components/LoginForm.js">Log In</a></li>
+                    <li><a href="tutor-apply">Tutor Apply</a></li>
+                    <li><a href="profile">Create Profile</a></li>
+                    <li><a href="login">Log In</a></li>
                 </ul>
             </nav>
             <div className = 'app'>

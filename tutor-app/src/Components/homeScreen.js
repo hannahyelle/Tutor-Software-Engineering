@@ -28,7 +28,7 @@ class homeScreen extends React.Component{
                     <div className="scroll-box">
                         <p>Students are able to create an account. With an account comes a profile and access to a calendar. A student can then browse the tutor search tool which lets the one search for classes or other users. Students are able to browse the tutors available and look at comapre schedules for comaptable times. Students must be a umaine student in order to create an account.</p>
                     </div>
-                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><h5>Student Sign-up</h5></a>
+                    <a href="post-listing"><h5>Post Listing</h5></a>
                     </div>
                 </div>
                 <div className="double-box">
