@@ -28,11 +28,11 @@ class App extends React.Component{
                     <h4>Tutor App</h4>
                 </div>
                 <ul className= "navs">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="post-listing">Post Listing</a></li>
-                    <li><a href="tutor-apply">Tutor Apply</a></li>
-                    <li><a href="profile">Create Profile</a></li>
-                    <li><a href="login">Log In</a></li>
+                    <li data-testid="homeButton"><a href="home">Home</a></li>
+                    <li data-testid="postListingButton"><a href="post-listing">Post Listing</a></li>
+                    <li data-testid="tutorButton"><a href="tutor-apply">Tutor Apply</a></li>
+                    <li data-testid='CreateProfileButton'><a href="profile">Create Profile</a></li>
+                    <li data-testid='LogInButton'><a href="login">Log In</a></li>
                 </ul>
             </nav>
             <div id="root"></div>
@@ -48,17 +48,17 @@ class App extends React.Component{
     }
     else if(window.location.href.includes("/login")){
       return(
-        <body>
+        <body data-testid="loginFormPage">
             <nav>
                 <div class="logo">
                     <h4>Tutor App</h4>
                 </div>
                 <ul class = "navs">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="post-listing">Post Listing</a></li>
-                    <li><a href="tutor-apply">Tutor Apply</a></li>
-                    <li><a href="profile">Create Profile</a></li>
-                    <li><a href="login">Log In</a></li>
+                    <li data-testid="homeButton"><a href="home">Home</a></li>
+                    <li data-testid="postListingButton"><a href="post-listing">Post Listing</a></li>
+                    <li data-testid="tutorButton"><a href="tutor-apply">Tutor Apply</a></li>
+                    <li data-testid='CreateProfileButton'><a href="profile">Create Profile</a></li>
+                    <li data-testid='LogInButton'><a href="login">Log In</a></li>
                 </ul>
             </nav>
             <div id="root"></div>
@@ -72,18 +72,18 @@ class App extends React.Component{
     }
     else if(window.location.href.includes("/tutor-apply")){
       return(
-        <body>
+        <body data-testid="TutorApplicationPage">
           <div className="nav"> 
             <nav className="nav">
                 <div className="logo">
                     <h4>Tutor App</h4>
                 </div>
                 <ul className= "navs">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="post-listing">Post Listing</a></li>
-                    <li><a href="tutor-apply">Tutor Apply</a></li>
-                    <li><a href="profile">Create Profile</a></li>
-                    <li><a href="login">Log In</a></li>
+                    <li data-testid="homeButton"><a href="home">Home</a></li>
+                    <li data-testid="postListingButton"><a href="post-listing">Post Listing</a></li>
+                    <li data-testid="tutorButton"><a href="tutor-apply">Tutor Apply</a></li>
+                    <li data-testid='CreateProfileButton'><a href="profile">Create Profile</a></li>
+                    <li data-testid='LogInButton'><a href="login">Log In</a></li>
                 </ul>
             </nav>
         <div className = 'app'>
@@ -98,18 +98,18 @@ class App extends React.Component{
 
     else if(window.location.href.includes("/profile")){
       return(
-        <body>
+        <body data-testid="createProfilePage">
           <div className="nav"> 
             <nav className="nav">
                 <div className="logo">
                     <h4>Tutor App</h4>
                 </div>
                 <ul className= "navs">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="post-listing">Post Listing</a></li>
-                    <li><a href="tutor-apply">Tutor Apply</a></li>
-                    <li><a href="profile">Create Profile</a></li>
-                    <li><a href="login">Log In</a></li>
+                    <li data-testid="homeButton"><a href="home">Home</a></li>
+                    <li data-testid="postListingButton"><a href="post-listing">Post Listing</a></li>
+                    <li data-testid="tutorButton"><a href="tutor-apply">Tutor Apply</a></li>
+                    <li data-testid='CreateProfileButton'><a href="profile">Create Profile</a></li>
+                    <li data-testid='LogInButton'><a href="login">Log In</a></li>
                 </ul>
             </nav>
         <div className = 'app'>
@@ -131,11 +131,11 @@ class App extends React.Component{
                     <h4>Tutor App</h4>
                 </div>
                 <ul className= "navs">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="post-listing">Post Listing</a></li>
-                    <li><a href="tutor-apply">Tutor Apply</a></li>
-                    <li><a href="profile">Create Profile</a></li>
-                    <li><a href="login">Log In</a></li>
+                    <li data-testid="homeButton"><a href="home">Home</a></li>
+                    <li data-testid="postListingButton"><a href="post-listing">Post Listing</a></li>
+                    <li data-testid="tutorButton"><a href="tutor-apply">Tutor Apply</a></li>
+                    <li data-testid='CreateProfileButton'><a href="profile">Create Profile</a></li>
+                    <li data-testid='LogInButton'><a href="login">Log In</a></li>
                 </ul>
             </nav>
         <div className = 'app'>
@@ -158,11 +158,11 @@ class App extends React.Component{
                     <h4>Tutor App</h4>
                 </div>
                 <ul className= "navs">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="post-listing">Post Listing</a></li>
-                    <li><a href="tutor-apply">Tutor Apply</a></li>
-                    <li><a href="profile">Create Profile</a></li>
-                    <li><a href="login">Log In</a></li>
+                    <li data-testid="homeButton"><a href="home">Home</a></li>
+                    <li data-testid="postListingButton"><a href="post-listing">Post Listing</a></li>
+                    <li data-testid="tutorButton"><a href="tutor-apply">Tutor Apply</a></li>
+                    <li data-testid='CreateProfileButton'><a href="profile">Create Profile</a></li>
+                    <li data-testid='LogInButton'><a href="login">Log In</a></li>
                 </ul>
             </nav>
         <div className = 'app'>
@@ -184,11 +184,11 @@ class App extends React.Component{
                     <h4>Tutor App</h4>
                 </div>
                 <ul className= "navs">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="post-listing">Post Listing</a></li>
-                    <li><a href="tutor-apply">Tutor Apply</a></li>
-                    <li><a href="profile">Create Profile</a></li>
-                    <li><a href="login">Log In</a></li>
+                    <li data-testid="homeButton"><a href="home">Home</a></li>
+                    <li data-testid="postListingButton"><a href="post-listing">Post Listing</a></li>
+                    <li data-testid="tutorButton"><a href="tutor-apply">Tutor Apply</a></li>
+                    <li data-testid='CreateProfileButton'><a href="profile">Create Profile</a></li>
+                    <li data-testid='LogInButton'><a href="login">Log In</a></li>
                 </ul>
             </nav>
             <div className = 'app'>

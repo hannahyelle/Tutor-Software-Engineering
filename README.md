@@ -27,18 +27,30 @@ navigate to the repository, and run 'npm install react-bootstrap bootstrap'
 react-select:
 navigate to the repository, and run 'npm i --save react-select'
 
+user-event:
+navigate to the repository, and run 'npm instal --save-dev @testing-library/user-event'
+
+##Running the App
+The website can be run by opening your system's command line and entering
+
+'cd (directory of tutor-app folder)'
+
+'npm start'
+
+This will start the react server and open the website in your default web browser
+
+Alternatively, Windows users can quickly start the website by running the "start.bat" file in the tutor-app folder
+
+
 ## Running Tests 
 
 The website can be tested by opening your system's command line, and entering
 
 'cd (directory of tutor-app folder)'
 
-'npm start'
+'npm run test'
 
-This will start the react sever and open the website in your default web browser
-
-
-Alternatively, Windows users can quickly start the website by running the "start.bat" file in the tutor-app folder
+This will start the Jest Testing
 
 ## Versioning
 

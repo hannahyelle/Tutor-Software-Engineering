@@ -1,14 +1,15 @@
-import { render, screen, userEvent } from '@testing-library/react';
+import { render, screen} from '@testing-library/react';
 import LoginForm from './LoginForm';
+import userEvent from '@testing-library/user-event';
 
-/*UI testing */
+//UI testing 
 test('tutor application rendered', () => {
     render(<LoginForm />);
-    const homeElement = screen.getByText('Welcome to Tutor Zone 3000!');
-    expect(linkElement).toBeInTheDocument();
+    const homeElement = screen.getByText('Log In to Tutor Zone 3000!');
+    expect(homeElement).toBeInTheDocument();
   });
 
-/*Event Testing*/
+//Event Testing
 //state testing after submission
 test('login form accepted after submit button', () => {
     render(<LoginForm/>);
@@ -19,7 +20,7 @@ test('login form accepted after submit button', () => {
     userEvent.type(passwordfield,"hello");
     userEvent.click(submit_btn);
 
-    
-
+    const loggedInScreen = screen.getByTestId("Tutor Zone 3000 Landing Page")
+    expect(loggedInScreen).toBeInTheDocument();
 })
-  
+
