@@ -59,7 +59,7 @@ class StudentProfile extends React.Component{
                   </div>
                 </div>
                 <div className="button">
-                  <input type="submit" defaultValue="Create Profile" />
+                  <input type="submit" data-testid="btn" defaultValue="Create Profile" />
                 </div>
               </form>
             </div>
