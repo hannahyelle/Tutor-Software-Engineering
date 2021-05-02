@@ -3,7 +3,7 @@ import LoginForm from './LoginForm';
 import userEvent from '@testing-library/user-event';
 
 //UI testing 
-test('tutor application rendered', () => {
+test('login form rendered', () => {
     render(<LoginForm />);
     const homeElement = screen.getByText('Log In to Tutor Zone 3000!');
     expect(homeElement).toBeInTheDocument();

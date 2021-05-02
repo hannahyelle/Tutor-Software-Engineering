@@ -116,18 +116,18 @@ class TutorApplication extends React.Component{
     render(){
         return (
         <div>
-            <link rel="stylesheet" href="style.css" />
+            <link data-testid="applicationPage" rel="stylesheet" href="style.css" />
             <div className="form">
             <h2 className="logIn-header">Tutor Application</h2>
                 <Form className="innerform">
                     <Form.Group className = "input" controlId = "formFirstName">
                         <Form.Label>First name:</Form.Label>
-                        <Form.Control type ="firstname" placeholder = "john" onChange={this.handleChange}/>
+                        <Form.Control data-testid="nameField" type ="firstname" placeholder = "john" onChange={this.handleChange}/>
                     </Form.Group>
 
                     <Form.Group className = "input" controlId = "formLastName">
                         <Form.Label>Last name:</Form.Label>
-                        <Form.Control type ="lastname" placeholder = "Doe" onChange={this.handleChange}/>
+                        <Form.Control data-testid="lastNameField" type ="lastname" placeholder = "Doe" onChange={this.handleChange}/>
                     </Form.Group>
 
                     <Form.Group className = "input" controlId = "formBasicEmail">
@@ -160,7 +160,7 @@ class TutorApplication extends React.Component{
                         <Form.Control type="gpa" placeholder="4.0" onChange={this.handleChange}/>
                     </Form.Group>
 
-                    <Button variant="primary" type="submit" className = "button" onClick = {this.logIn}>
+                    <Button data-testid="applySubmit" variant="primary" type="submit" className = "button" onClick = {this.logIn}>
                         Submit
                     </Button>
                 </Form>
