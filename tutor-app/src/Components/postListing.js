@@ -7,6 +7,11 @@ import {SubjectSelect, TimeSelect} from './dropdownSelect';
 class PostListing extends React.Component{
 
     render(){
+        function postSuccess(e){
+            e.preventDefault();
+            window.location.href = "/post-success";
+        }
+
         return(
             <div>
             <link rel="stylesheet" href="style.css" />
@@ -21,7 +26,7 @@ class PostListing extends React.Component{
                         <Form.Label>Select Time Availabilities</Form.Label>
                         <TimeSelect/>
                     </Form.Group>
-                    <Button variant="primary" type="submit" className = "button" onClick = {this.render}>
+                    <Button variant="primary" type="submit" className = "button" onClick = {postSuccess}>
                         Post Listing
                     </Button>
                 </Form>
